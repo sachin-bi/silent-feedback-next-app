@@ -74,7 +74,7 @@ export async function POST(request: Request) {
       username,
       verifyCode
     );
-    console.log("-- emailResponse from api/sign-up/route.ts :", emailResponse);
+    // console.log("-- emailResponse from api/sign-up/route.ts :", emailResponse);
 
     if (!emailResponse.success) {
       return Response.json(
