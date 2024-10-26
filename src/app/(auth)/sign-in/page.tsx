@@ -1,5 +1,4 @@
 // will not run without wrapper ... so made wrapper in context folder and wrraped layout with that
-
 'use client'
 import { useSession, signIn, signOut } from "next-auth/react"
 

@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
 
+  // imp.
 export const authOptions: NextAuthOptions = {
   providers: [
 
