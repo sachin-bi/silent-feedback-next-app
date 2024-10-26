@@ -1,4 +1,6 @@
 // will not run without wrapper ... so made wrapper in context folder and wrraped layout with that
+
+// --old code--
 'use client'
 import { useSession, signIn, signOut } from "next-auth/react"
 
@@ -15,7 +17,7 @@ export default function Component() {
       </>
     )
   }
-  
+
   return (
     <>
       Not signed in <br />
@@ -23,3 +25,4 @@ export default function Component() {
     </>
   )
 }
+

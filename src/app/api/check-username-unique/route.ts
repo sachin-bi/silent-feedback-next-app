@@ -10,7 +10,7 @@ const UsernameQuerySchema = z.object({
 export async function GET(request: Request) {
   // TODO: use this in all other routes
   // console.log("-- request: ");
-  
+
   // if (request.method !== 'GET') {
   //   return Response.json(
   //     {
@@ -20,7 +20,6 @@ export async function GET(request: Request) {
   //     { status: 405 }
   //   );
   // }
-
 
   await dbConnect();
   // localhost:3000/api/cuu?username=sachin?phone=android
@@ -52,30 +51,32 @@ export async function GET(request: Request) {
       );
     }
 
-    const {username} = result.data
+    const { username } = result.data;
 
-    const existingVerifiedUser = await UserModel.findOne({username, isVerified:true})
+    const existingVerifiedUser = await UserModel.findOne({
+      username,
+      isVerified: true,
+    });
 
-     if (existingVerifiedUser) {
-        return Response.json(
-            {
-              success: false,
-              message:"Username is already taken.!",
-            },
-            { status: 400 }
-          );
-        }
-        
-        
-        return Response.json(
-            {
-              success: true,
-              message:"Username is unique.!",
-            },
-            { status: 200 }
-          );
-      } catch (err) {
-        console.log("--- Error checking username.!", err);
+    if (existingVerifiedUser) {
+      return Response.json(
+        {
+          success: false,
+          message: "Username is already taken.!",
+        },
+        { status: 400 }
+      );
+    }
+
+    return Response.json(
+      {
+        success: true,
+        message: "Username is unique",
+      },
+      { status: 200 }
+    );
+  } catch (err) {
+    console.log("--- Error checking username.!", err);
     return Response.json(
       {
         success: false,
