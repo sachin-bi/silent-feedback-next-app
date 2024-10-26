@@ -24,12 +24,12 @@ export async function GET(request: Request) {
   const userId = new mongoose.Types.ObjectId(user._id);
 
   try {
-    // Aggregation starts here
+    // TODO: study   -Aggregation starts here
     const user = await UserModel.aggregate([
       { $match: { id: userId } },
       { $unwind: "$messages" },
       { $sort: { "messages.createdAt": -1 } },
-      { $group:{_id: '$_id', messages:{$push:'$messages'}}}
+      { $group: { _id: "$_id", messages: { $push: "$messages" } } },
     ]);
     if (!user || user.length === 0) {
       return Response.json(
@@ -48,5 +48,15 @@ export async function GET(request: Request) {
       },
       { status: 200 }
     );
-  } catch (err) {}
+  } catch (err) {
+    console.log("---error from getMessages route:", err);
+
+    return Response.json(
+      {
+        success: false,
+        message: "Err in get-messages/route",
+      },
+      { status: 500 }
+    );
+  }
 }
