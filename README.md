@@ -34,8 +34,7 @@ bun dev
 ## react-hook-form
 * form n zod
 * [docs](https://www.react-hook-form.com/get-started)
-* [watch/useForm](https://react-hook-form.com/docs/useform/watch)
-     
-    
+* [watch/setValue/useForm](https://react-hook-form.com/docs/useform/watch) -> for toggle input 
+** usecallbackhook -> use
 
 

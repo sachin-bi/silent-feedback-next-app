@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   }
 
   const userId = user._id;    //TODO: watch out! might be issue
-  const { acceptMessages } = await request.json();
+  const { acceptMessages } = await request.json();  // why this line
 
   try {
     const updatedUser = await UserModel.findByIdAndUpdate(
@@ -103,7 +103,7 @@ export async function GET(request: Request) {
         {
           success: true,
           message: "User found ",
-          isAcceptingMessages : foundUser.isAcceptingMessage,
+          isAcceptingMessage : foundUser.isAcceptingMessage,
         },
         { status: 200 }
     );
