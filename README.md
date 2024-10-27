@@ -17,15 +17,15 @@ bun dev
 
 ## For next-auth setup
     
-    - should have knowledge of provider and callbacks.
-    - set up next auth.
+* should have knowledge of provider and callbacks.
+* set up next auth.
 
 ## Lucide-react
-    - there are many icons (available here)
+1. there are many icons (available here)
 
 ## ui.shadcn
-    - components used from shadcn
-    - [docs](https://ui.shadcn.com/docs/components)
+1. components used from shadcn
+2. [docs](https://ui.shadcn.com/docs/components)
 
 ## usehooks-ts
 1. useDebounceValue
