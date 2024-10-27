@@ -21,20 +21,20 @@ bun dev
 * set up next auth.
 
 ## Lucide-react
-1. there are many icons (available here)
+* there are many icons (available here)
 
 ## ui.shadcn
-1. components used from shadcn
-2. [docs](https://ui.shadcn.com/docs/components)
+* components used from shadcn
+* [docs](https://ui.shadcn.com/docs/components)
 
 ## usehooks-ts
-1. useDebounceValue
-2. [docs](https://usehooks-ts.com/react-hook/use-debounce-value)
+* useDebounceValue
+* [docs](https://usehooks-ts.com/react-hook/use-debounce-value)
     
 ## react-hook-form
-1. form n zod
-2. [docs](https://www.react-hook-form.com/get-started)
-3. [watch/useForm](https://react-hook-form.com/docs/useform/watch)
+* form n zod
+* [docs](https://www.react-hook-form.com/get-started)
+* [watch/useForm](https://react-hook-form.com/docs/useform/watch)
      
     
 
