@@ -1,3 +1,4 @@
+
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/options";
 import dbConnect from "@/lib/dbConnect";
@@ -52,12 +53,12 @@ export async function GET(request: Request) {
   } catch (err) {
     console.log("---error from getMessages route:", err);
 
-    return Response.json(
-      {
-        success: false,
-        message: "Err in get-messages/route",
-      },
-      { status: 500 }
-    );
+      return Response.json(
+        {
+          success: false,
+          message: "Err in get-messages/route",
+        },
+        { status: 500 }
+      );
   }
 }
