@@ -26,11 +26,12 @@ export async function GET(request: Request) {
   try {
     // TODO: study   -Aggregation starts here
     const user = await UserModel.aggregate([
-      { $match: { id: userId } },
+      { $match: { _id: userId } },
       { $unwind: "$messages" },
       { $sort: { "messages.createdAt": -1 } },
       { $group: { _id: "$_id", messages: { $push: "$messages" } } },
     ]);
+    // its showing 404 err is there anything worong
     if (!user || user.length === 0) {
       return Response.json(
         {
