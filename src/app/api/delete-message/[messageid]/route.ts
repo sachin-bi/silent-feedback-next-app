@@ -9,7 +9,7 @@ export async function DELETE(
   request: Request,
   { params }: { params: { messageid: string } }
 ) {
-  const messageId = params.messageid;
+  const messageId = await params.messageid;
   await dbConnect();
 
   const session = await getServerSession(authOptions);
@@ -41,7 +41,6 @@ export async function DELETE(
       );
     }
 
-    
     return Response.json(
       {
         success: true,
@@ -50,9 +49,8 @@ export async function DELETE(
       { status: 500 }
     );
   } catch (err) {
-    console.log("-- err in delete-message route")
+    console.log("-- err in delete-message route");
 
-    
     return Response.json(
       {
         success: false,
