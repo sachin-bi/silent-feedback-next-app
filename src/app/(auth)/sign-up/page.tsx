@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { useDebounceValue,useDebounceCallback } from 'usehooks-ts'
+import { useDebounceCallback } from 'usehooks-ts'
 import { useToast } from "@/hooks/use-toast"
 import { useRouter } from "next/navigation"
 import { signUpSchema } from "@/schemas/signUpSchema"
@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
+  // FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -57,7 +57,7 @@ const signUp = () => {
           // setUsernameMessage(message)
           setUsernameMessage(response.data.message)
           // console.log('--FE sign-up page, response:',response);
-          
+
 
         } catch (error) {
           // axios err handling 
@@ -138,10 +138,10 @@ const signUp = () => {
                     />
                   </FormControl>
                   {
-                    isCheckingUsername && <Loader2 className="animate-spin"/>
+                    isCheckingUsername && <Loader2 className="animate-spin" />
                   }
-                  <p className={`text-sm ${usernameMessage === "Username is unique" ? "text-green-500": 'text-red-500'}`}>
-                  {usernameMessage}
+                  <p className={`text-sm ${usernameMessage === "Username is unique" ? "text-green-500" : 'text-red-500'}`}>
+                    {usernameMessage}
                   </p>
                   {/* <FormDescription>
                     This is your public display name.
@@ -183,7 +183,7 @@ const signUp = () => {
                     />
                   </FormControl>
 
-               
+
 
                   <FormMessage />
                 </FormItem>
