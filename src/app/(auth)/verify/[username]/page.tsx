@@ -33,8 +33,9 @@ function verifyAccount() {
     const form = useForm<z.infer<typeof verifySchema>>({
         resolver: zodResolver(verifySchema)
         ,
+        // Initialize code as an empty string // else it shows ts error(undefined) in FE
         defaultValues: {
-            code: '',  // Initialize code as an empty string
+            code: '',
         },
 
     })

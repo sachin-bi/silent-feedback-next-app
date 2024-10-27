@@ -77,7 +77,7 @@ const signUp = () => {
   }, [username])
 
 
-  const onSubmit = async (data: z.infer<typeof signUpSchema>) => {
+  const onSubmit = async (data: z.infer<typeof signUpSchema>) => {    //by default you get data here
     console.log("-- from sign in page , onsubmit data:", data);
 
     setIsSubmitting(true)
