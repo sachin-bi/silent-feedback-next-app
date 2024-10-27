@@ -28,12 +28,14 @@ bun dev
     - [docs](https://ui.shadcn.com/docs/components)
 
 ## usehooks-ts
-    - useDebounceValue
-    - [docs](https://usehooks-ts.com/react-hook/use-debounce-value)
+1. useDebounceValue
+2. [docs](https://usehooks-ts.com/react-hook/use-debounce-value)
     
 ## react-hook-form
-    - form n zod
-    - [docs](https://www.react-hook-form.com/get-started)
+1. form n zod
+2. [docs](https://www.react-hook-form.com/get-started)
+3. [watch/useForm](https://react-hook-form.com/docs/useform/watch)
+     
     
 
 
