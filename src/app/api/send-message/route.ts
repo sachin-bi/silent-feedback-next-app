@@ -18,13 +18,22 @@ export async function POST(request: Request) {
         { status: 404 }
       );
     }
+    if (!user.isVerified) {
+      return Response.json(
+        {
+          success: false,
+          message: `${user.username} - User not verified.!`,
+        },
+        { status: 400 }
+      );
+    }
 
     // is user accepting  messages
     if (!user.isAcceptingMessage) {
       return Response.json(
         {
           success: false,
-          message: "User is not accepting messages!",
+          message: `${user.username} - User is not accepting messages!`,
         },
         { status: 403 } //forbidden
       );

@@ -34,18 +34,26 @@ export async function GET(request: Request) {
       );
     }
 
-    const finalSuggestions = result.response.text();
+    // data to be sent - manipulation
+    const textSuggestions = result.response.text();
+
+    // Step 1: Split by "||" to separate each question, then trim extra whitespace
+    const questionsArray = textSuggestions.split("||").map((question) => question.trim());
+
+    // Step 2: Convert each question into an object with a 'text' key
+    const questionsObjectsArray = questionsArray.map((question) => ({
+      content: question,
+    }));
 
     return Response.json(
       {
         success: true,
         message: "Gemini suggesstions! ",
-        finalSuggestions,
+        messages: questionsObjectsArray,
       },
       { status: 200 }
     );
   } catch (err) {
-
     console.log("---error from ai suggest-messages route:", err);
     return Response.json(
       {
@@ -54,6 +62,5 @@ export async function GET(request: Request) {
       },
       { status: 500 }
     );
-    
   }
 }
