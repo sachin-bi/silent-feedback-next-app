@@ -7,6 +7,21 @@
 ### Overview
 SilentFeedback is a feedback platform enabling users to give and receive anonymous messages in a secure and streamlined environment. This app is built with Next.js and the MERN stack (MongoDB, Express, React, and Node.js), ensuring a powerful, scalable experience.
 
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](./screenshots/landing_page.png)
+
+### Verified User Dashboard
+![Job Description Input](./screenshots/dashboard-after-msg.png)
+
+### Anonymous Person Sending Message To Verified User
+![Generated Interview Questions](./screenshots/anonymous-msg-sender-pg.png)
+
+---
+
 ### Key Features:
 - **Anonymity First**: Allow users to share genuine feedback without revealing identities.
 - **Seamless Experience**: Optimized with Next.js and Tailwind CSS for speed and elegance.
